@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.2" client="site" method="upgrade">
+    <name>MOD_TMPL_SBUECHLER</name>
+    <version>1.0.0</version>
+    <creationDate>2020-02-17</creationDate>
+    <license>http://www.gnu.org/licenses/gpl</license>
+    <copyright>MIT</copyright>
+    <author>Sebastian Buechler</author>
+    <authorEmail>opensource@sbuechler</authorEmail>
+    <authorUrl>https://www.sbuechler.de</authorUrl>
+    <description>MOD_TMPL_SBUECHLER_XML_DESCRIPTION</description>
+    <files>
+        <filename module="MOD_TMPL_SBUECHLER">mod_tmpl_sbuechler.php</filename>
+        <filename module="MOD_TMPL_SBUECHLER">mod_tmpl_sbuechler.css</filename>
+		<filename module="MOD_TMPL_SBUECHLER">js/mod_tmpl_sbuechler.js</filename>
+        <filename module="MOD_TMPL_SBUECHLER">helper.php</filename>
+        <filename module="MOD_TMPL_SBUECHLER">index.html</filename>
+        <filename module="MOD_TMPL_SBUECHLER">tmpl/default.php</filename>
+        <filename module="MOD_TMPL_SBUECHLER">tmpl/index.html</filename>
+        <folder plugin="MOD_TMPL_SBUECHLER">fields</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.MOD_TMPL_SBUECHLER.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.MOD_TMPL_SBUECHLER.sys.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.MOD_TMPL_SBUECHLER.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.MOD_TMPL_SBUECHLER.sys.ini</language>
+    </languages>
+
+	<!-- We define the update source -->
+	<!-- From https://docs.joomla.org/J3.x:Creating_a_simple_module/Adding_Auto_Update -->
+	<updateservers>
+		<server type="extension" name="MOD_TMPL_SBUECHLER" priority="1"> http://sbuechler.de/_priv/joomla_updates/MOD_TMPL_SBUECHLER.xml</server>
+	</updateservers>
+	
+    <config>
+        <fields name="params" addfieldpath="/modules/MOD_TMPL_SBUECHLER/fields">
+            
+            <fieldset name="MOD_TMPL_SBUECHLER_SETTINGS">
+				
+				<field name="param1" type="text" default="1" label="MOD_TMPL_SBUECHLER_PARAM1" description="MOD_TMPL_SBUECHLER_PARAM1DESC"  />
+				<field name="param2" type="text" default="2" label="MOD_TMPL_SBUECHLER_PARAM2" description="MOD_TMPL_SBUECHLER_PARAM2DESC" />
+				<field name="param3" type="text" default="3" label="MOD_TMPL_SBUECHLER_PARAM3" description="MOD_TMPL_SBUECHLER_PARAM3DESC" />
+	
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="moduleclass_sfx" type="text" default="" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+            </fieldset>
+          
+        </fields>
+    </config>
+</extension>
