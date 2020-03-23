@@ -26,10 +26,11 @@
         <language tag="de-DE">language/de-DE/de-DE.MOD_TMPL_SBUECHLER.sys.ini</language>
     </languages>
 
-	<!-- We define the update source -->
+	<!-- We define the update source here-->
+    <!-- Do not forget to put a valid URL within the 'server' tag! -->
 	<!-- From https://docs.joomla.org/J3.x:Creating_a_simple_module/Adding_Auto_Update -->
 	<updateservers>
-		<server type="extension" name="MOD_TMPL_SBUECHLER" priority="1"> http://sbuechler.de/_priv/joomla_updates/MOD_TMPL_SBUECHLER.xml</server>
+		<server type="extension" name="MOD_TMPL_SBUECHLER" priority="1"> http://sbuechler.de/joomla_updates/MOD_TMPL_SBUECHLER.xml</server>
 	</updateservers>
 	
     <config>
