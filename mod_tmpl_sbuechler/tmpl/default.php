@@ -14,18 +14,32 @@ defined('_JEXEC') or die('Restricted access');
 echo '<!-- Joomla module template - sbuechler.de -->';
 ?>
 
-
   <?php 
-	// Executes when the submit button is clicked
+     $submitResult = ".. Your output goes here";
+	// Executes whenever the submit button is clicked
 	if (isset($_POST['yourBtn'])){	
-		$spnSubmitResult = "Your Output";
+		$submitResult = "You have clicked me!";
 	}	
   ?>
 
-  	<div>
-		<input id="btnSubmit" type="submit" class="" name="yourBtn" value="Click me">						
-	</div>
-	<div>
-		<span id="spnSubmitResult"><?php echo $spnSubmitResult ?></span>
-	</div>
-								
+  <div class="divWrapper">
+  <p>This is a very simple, straight-forward & ready-to-install Joomla module.</p>
+  <p>It was developed using version 3.9 of <a href="https://www.joomla.org/3/">Joomla.org</a>.</p>
+
+  <p>You can create arbitrary instances of the module and place them on any module position of your template.<br>
+     It comes with <b>3 sample parameters</b> which can be adjusted in the module settings.</p>
+
+<h4>Example content, using a PHP submit form:</h4>
+
+  <form id="vzrForm" method="post">			
+		<div>
+			<input id="btnSubmit" type="submit" class="" style="font-weight:bold" name="yourBtn" value="Click me!">	
+			<span id="spnSubmitResult">
+				<?php if (isset($submitResult)) echo $submitResult;?>
+			</span>					
+		</div>
+		<div>
+			
+		</div>
+	</form>					
+  </div>
